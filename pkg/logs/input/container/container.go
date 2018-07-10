@@ -8,7 +8,7 @@
 package container
 
 import (
-	"encoding/json"
+	json "github.com/json-iterator/go"
 	"regexp"
 	"strings"
 

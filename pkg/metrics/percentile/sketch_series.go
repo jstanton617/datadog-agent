@@ -10,7 +10,7 @@ package percentile
 
 import (
 	"bytes"
-	"encoding/json"
+	json "github.com/json-iterator/go"
 	"expvar"
 
 	agentpayload "github.com/DataDog/agent-payload/gogen"
