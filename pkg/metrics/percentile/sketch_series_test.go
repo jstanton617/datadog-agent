@@ -100,5 +100,5 @@ func TestMarshalJSON(t *testing.T) {
 	assert.NotNil(t, payload)
 
 	expectedPayload := []byte("{\"sketch_series\":[{\"metric\":\"test.metrics\",\"tags\":[\"tag1\",\"tag2:yes\"],\"host\":\"localhost\",\"interval\":0,\"sketches\":[{\"timestamp\":12345,\"qsketch\":{\"entries\":[],\"buf\":[1],\"min\":1,\"max\":1,\"cnt\":1,\"sum\":1,\"avg\":1}},{\"timestamp\":67890,\"qsketch\":{\"entries\":[[10,1,0],[14,3,0],[21,2,0]],\"buf\":[],\"min\":10,\"max\":21,\"cnt\":6,\"sum\":96,\"avg\":16}}]}]}\n")
-	assert.Equal(t, payload, []byte(expectedPayload))
+	assert.JSONEq(t, string(payload), string([]byte(expectedPayload)))
 }
