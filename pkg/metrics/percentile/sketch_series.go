@@ -10,13 +10,14 @@ package percentile
 
 import (
 	"bytes"
-	json "github.com/json-iterator/go"
 	"expvar"
 
 	agentpayload "github.com/DataDog/agent-payload/gogen"
 	"github.com/DataDog/datadog-agent/pkg/aggregator/ckey"
 	"github.com/DataDog/datadog-agent/pkg/serializer/marshaler"
 	"github.com/gogo/protobuf/proto"
+
+	json "github.com/json-iterator/go"
 )
 
 var sketchSeriesExpvar = expvar.NewMap("SketchSeries")

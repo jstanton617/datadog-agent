@@ -2,7 +2,6 @@ package gui
 
 import (
 	"bytes"
-	json "github.com/json-iterator/go"
 	"expvar"
 	"fmt"
 	"html/template"
@@ -16,6 +15,8 @@ import (
 	"github.com/DataDog/datadog-agent/cmd/agent/common"
 	"github.com/DataDog/datadog-agent/pkg/autodiscovery"
 	"github.com/DataDog/datadog-agent/pkg/collector/check"
+
+	json "github.com/json-iterator/go"
 )
 
 var fmap = template.FuncMap{

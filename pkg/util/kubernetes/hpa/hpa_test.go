@@ -8,10 +8,10 @@
 package hpa
 
 import (
-	json "github.com/json-iterator/go"
 	"fmt"
 	"testing"
 
+	json "github.com/json-iterator/go"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/api/autoscaling/v2beta1"
 	"k8s.io/api/core/v1"

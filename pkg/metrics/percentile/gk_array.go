@@ -10,12 +10,13 @@
 package percentile
 
 import (
-	json "github.com/json-iterator/go"
 	"fmt"
 	"math"
 	"sort"
 
 	"github.com/DataDog/datadog-agent/pkg/util/log"
+
+	json "github.com/json-iterator/go"
 )
 
 // EPSILON represents the accuracy of the sketch.

@@ -9,13 +9,12 @@
 package agent
 
 import (
-	json "github.com/json-iterator/go"
 	"fmt"
 	"net/http"
 	"sort"
 
-	"github.com/DataDog/datadog-agent/pkg/util/log"
 	"github.com/gorilla/mux"
+	json "github.com/json-iterator/go"
 
 	"github.com/DataDog/datadog-agent/cmd/agent/api/response"
 	"github.com/DataDog/datadog-agent/cmd/agent/common"
@@ -30,6 +29,7 @@ import (
 	"github.com/DataDog/datadog-agent/pkg/status/health"
 	"github.com/DataDog/datadog-agent/pkg/tagger"
 	"github.com/DataDog/datadog-agent/pkg/util"
+	"github.com/DataDog/datadog-agent/pkg/util/log"
 	"github.com/DataDog/datadog-agent/pkg/version"
 )
 

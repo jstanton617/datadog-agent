@@ -7,7 +7,6 @@ package status
 
 import (
 	"bytes"
-	json "github.com/json-iterator/go"
 	"fmt"
 	"html/template"
 	"io"
@@ -15,6 +14,8 @@ import (
 
 	"github.com/DataDog/datadog-agent/cmd/agent/common"
 	"github.com/DataDog/datadog-agent/pkg/util/executable"
+
+	json "github.com/json-iterator/go"
 )
 
 var (
