@@ -270,7 +270,7 @@ func (c *PythonCheck) Configure(data integration.Data, initConfig integration.Da
 		// ...and retry to get an instance
 		instance, err = c.getInstance(nil, kwargs)
 		if err != nil {
-			return fmt.Errorf("could not invoke python check constructor: %s", err)
+			return fmt.Errorf("could not invoke python check constructor:\n%s", err)
 		}
 
 		log.Warnf("passing `agentConfig` to the constructor is deprecated, please use the `get_config` function from the 'datadog_agent' package (%s).", c.ModuleName)

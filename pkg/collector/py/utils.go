@@ -107,11 +107,13 @@ func (sl *stickyLock) getPythonError() (string, error) {
 			pyFormattedExc := formatExcFn.CallFunction(ptype, pvalue, ptraceback)
 			if pyFormattedExc != nil {
 				defer pyFormattedExc.DecRef()
-				pyStringExc := pyFormattedExc.Str()
-				if pyStringExc != nil {
-					defer pyStringExc.DecRef()
-					return python.PyString_AsString(pyStringExc), nil
+
+				tracebackString := ""
+				// "format_exception" return a list of strings (on per line)
+				for i := 0; i < python.PyList_GET_SIZE(pyFormattedExc); i++ {
+					tracebackString = tracebackString + python.PyString_AsString(python.PyList_GetItem(pyFormattedExc, i))
 				}
+				return tracebackString, nil
 			}
 		}
 
